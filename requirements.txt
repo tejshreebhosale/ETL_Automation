@@ -3,3 +3,4 @@ pandas
 openpyxl
 allure-pytest
 pytest-html
+matplotlib
