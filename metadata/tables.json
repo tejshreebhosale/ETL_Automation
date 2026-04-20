@@ -2,7 +2,10 @@
   {
     "table_name": "sales",
     "type": "excel",
-    "source": "data/sample_sales.xlsx"
+    "source": "data/sample_sales.xlsx",
+    "null_threshold": 5,
+    "duplicate_threshold": 5,
+    "validation_mode": "threshold"
   },
   {
     "table_name": "sales_compare",
@@ -12,6 +15,9 @@
     "primary_key": ["order_id"],
     "tolerance": {
       "amount": 0.05
-    }
+    },
+    "null_threshold": 5,
+    "duplicate_threshold": 5,
+    "validation_mode": "threshold"
   }
 ]
