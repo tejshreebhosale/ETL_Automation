@@ -1,37 +1,30 @@
-# Simple ELT Framework
+# ETL Validation Framework
 
-This project includes a beginner-friendly Python ELT framework using Excel as the source and target.
+## Features
+- Metadata-driven framework
+- Excel & ETL validation
+- Data comparison with tolerance
+- Column-level mismatch detection
+- HTML dashboard reporting
+- Allure reporting
+- Email automation
 
-## Structure
+## Tech Stack
+- Python
+- Pandas
+- Pytest
+- Allure
+- Matplotlib
 
-- `config/`
-- `metadata/`
-- `src/`
-  - `connectors/`
-  - `transformations/`
-  - `validations/`
-- `tests/`
-- `utils/`
-- `data/`
-- `output/`
-- `logs/`
-- `reports/`
-- `main.py`
+## How to Run
+1. Set environment variables:
+   EMAIL_USER
+   EMAIL_PASSWORD
 
-## Install dependencies
+2. Run:
+   python main.py
 
-```bash
-pip install -r requirements.txt
-```
-
-## Run the ELT process
-
-```bash
-python main.py
-```
-
-## Run tests with HTML report
-
-```bash
-pytest --html=reports/report.html
-```
+## Reports
+- reports/summary.xlsx
+- reports/dashboard.html
+- allure-results/

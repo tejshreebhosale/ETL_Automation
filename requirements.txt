@@ -1,4 +1,5 @@
+pytest
 pandas
 openpyxl
-pytest
+allure-pytest
 pytest-html
