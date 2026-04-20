@@ -1,0 +1,168 @@
+2026-04-20 20:55:46,412 - INFO - Loaded 5 rows from data/sample_sales.xlsx
+2026-04-20 20:55:46,418 - INFO - Transformed data with 4 rows
+2026-04-20 20:55:46,419 - INFO - Row count validation passed
+2026-04-20 20:55:46,420 - INFO - Null value validation passed
+2026-04-20 20:55:46,421 - INFO - Duplicate validation passed
+2026-04-20 20:55:46,446 - INFO - Saved transformed data to output/transformed_sales.xlsx
+2026-04-20 22:47:42,951 | INFO | elt_logger | Processing table: sales
+2026-04-20 22:47:43,131 | INFO | elt_logger | sales | Row Count: 5
+2026-04-20 22:47:43,131 | INFO | elt_logger | sales | Null Count: 2
+2026-04-20 22:47:43,138 | INFO | elt_logger | sales | Duplicate Count: 1
+2026-04-20 22:51:41,239 | INFO | elt_logger | Processing table: sales
+2026-04-20 22:51:41,436 | INFO | elt_logger | sales | Row Count: 5
+2026-04-20 22:51:41,436 | INFO | elt_logger | sales | Null Count: 2
+2026-04-20 22:51:41,436 | INFO | elt_logger | sales | Duplicate Count: 1
+2026-04-20 22:51:41,444 | INFO | elt_logger | Null count: 2
+2026-04-20 22:51:41,454 | INFO | elt_logger | Duplicate count: 1
+2026-04-20 23:08:20,217 | INFO | elt_logger | Processing: sales
+2026-04-20 23:09:44,066 | INFO | elt_logger | Processing table: sales
+2026-04-20 23:09:44,223 | INFO | elt_logger | sales | Row Count: 5
+2026-04-20 23:09:44,223 | INFO | elt_logger | sales | Null Count: 2
+2026-04-20 23:09:44,223 | INFO | elt_logger | sales | Duplicate Count: 1
+2026-04-20 23:09:44,226 | INFO | elt_logger | Starting ELT Validation Framework
+2026-04-20 23:09:44,226 | INFO | elt_logger | Processing table: sales
+2026-04-20 23:09:44,234 | INFO | elt_logger | sales | row_count | Value=5 | Status=PASS
+2026-04-20 23:09:44,234 | INFO | elt_logger | sales | null_check | Value=2 | Status=FAIL
+2026-04-20 23:09:44,234 | INFO | elt_logger | sales | duplicate_check | Value=1 | Status=FAIL
+2026-04-20 23:09:44,235 | INFO | elt_logger | Execution Completed
+2026-04-20 23:09:44,242 | INFO | elt_logger | Null count: 2
+2026-04-20 23:09:44,250 | INFO | elt_logger | Duplicate count: 1
+2026-04-20 23:20:30,105 | INFO | elt_logger | Processing: sales
+2026-04-20 23:26:53,944 | INFO | elt_logger | Processing: sales
+2026-04-20 23:29:01,524 | INFO | elt_logger | Processing: sales
+2026-04-20 23:32:38,184 | INFO | elt_logger | Processing: sales
+2026-04-20 23:36:06,817 | INFO | elt_logger | Processing: sales
+2026-04-20 23:36:41,551 | INFO | elt_logger | Processing: sales
+2026-04-20 23:38:06,080 | INFO | elt_logger | Starting ELT Validation Framework
+2026-04-20 23:38:06,081 | INFO | elt_logger | Processing table: sales
+2026-04-20 23:38:06,229 | INFO | elt_logger | sales | row_count | Value=5 | Status=PASS
+2026-04-20 23:38:06,230 | INFO | elt_logger | sales | null_check | Value=2 | Status=FAIL
+2026-04-20 23:38:06,230 | INFO | elt_logger | sales | duplicate_check | Value=1 | Status=FAIL
+2026-04-20 23:38:06,230 | WARNING | elt_logger | sales → VALIDATIONS FAILED ❌
+2026-04-20 23:38:06,230 | INFO | elt_logger | Processing table: sales_oracle
+2026-04-20 23:38:06,231 | ERROR | elt_logger | sales_oracle → ERROR: Unsupported type: oracle
+2026-04-20 23:38:06,231 | INFO | elt_logger | Processing table: sales_databricks
+2026-04-20 23:38:06,231 | ERROR | elt_logger | sales_databricks → ERROR: Unsupported type: databricks
+2026-04-20 23:38:06,231 | INFO | elt_logger | Execution Completed
+2026-04-20 23:39:44,756 | INFO | elt_logger | Starting ELT Validation Framework
+2026-04-20 23:39:44,757 | INFO | elt_logger | Processing table: sales
+2026-04-20 23:39:44,902 | INFO | elt_logger | sales | row_count | Value=5 | Status=PASS
+2026-04-20 23:39:44,902 | INFO | elt_logger | sales | null_check | Value=2 | Status=FAIL
+2026-04-20 23:39:44,903 | INFO | elt_logger | sales | duplicate_check | Value=1 | Status=FAIL
+2026-04-20 23:39:44,903 | WARNING | elt_logger | sales → VALIDATIONS FAILED ❌
+2026-04-20 23:39:44,903 | INFO | elt_logger | Processing table: sales_oracle
+2026-04-20 23:39:44,903 | ERROR | elt_logger | sales_oracle → ERROR: Unsupported type: oracle
+2026-04-20 23:39:44,904 | INFO | elt_logger | Processing table: sales_databricks
+2026-04-20 23:39:44,904 | ERROR | elt_logger | sales_databricks → ERROR: Unsupported type: databricks
+2026-04-20 23:39:44,904 | INFO | elt_logger | Execution Completed
+2026-04-20 23:40:39,928 | INFO | elt_logger | Starting ELT Validation Framework
+2026-04-20 23:40:58,466 | INFO | elt_logger | Starting ELT Validation Framework
+2026-04-20 23:40:58,467 | INFO | elt_logger | Processing table: sales
+2026-04-20 23:40:58,615 | INFO | elt_logger | sales | row_count | Value=5 | Status=PASS
+2026-04-20 23:40:58,616 | INFO | elt_logger | sales | null_check | Value=2 | Status=FAIL
+2026-04-20 23:40:58,616 | INFO | elt_logger | sales | duplicate_check | Value=1 | Status=FAIL
+2026-04-20 23:40:58,616 | WARNING | elt_logger | sales → VALIDATIONS FAILED ❌
+2026-04-20 23:40:58,617 | INFO | elt_logger | Execution Completed
+2026-04-20 23:41:09,964 | INFO | elt_logger | Starting ELT Validation Framework
+2026-04-20 23:41:09,965 | INFO | elt_logger | Processing table: sales
+2026-04-20 23:41:10,112 | INFO | elt_logger | sales | row_count | Value=5 | Status=PASS
+2026-04-20 23:41:10,113 | INFO | elt_logger | sales | null_check | Value=2 | Status=FAIL
+2026-04-20 23:41:10,113 | INFO | elt_logger | sales | duplicate_check | Value=1 | Status=FAIL
+2026-04-20 23:41:10,114 | WARNING | elt_logger | sales → VALIDATIONS FAILED ❌
+2026-04-20 23:41:10,114 | INFO | elt_logger | Execution Completed
+2026-04-20 23:41:20,348 | INFO | elt_logger | Starting ELT Validation Framework
+2026-04-20 23:41:20,349 | INFO | elt_logger | Processing table: sales
+2026-04-20 23:41:20,494 | INFO | elt_logger | sales | row_count | Value=5 | Status=PASS
+2026-04-20 23:41:20,494 | INFO | elt_logger | sales | null_check | Value=2 | Status=FAIL
+2026-04-20 23:41:20,494 | INFO | elt_logger | sales | duplicate_check | Value=1 | Status=FAIL
+2026-04-20 23:41:20,495 | WARNING | elt_logger | sales → VALIDATIONS FAILED ❌
+2026-04-20 23:41:20,495 | INFO | elt_logger | Execution Completed
+2026-04-20 23:51:49,743 | INFO | elt_logger | Starting ELT Validation Framework
+2026-04-20 23:51:49,744 | INFO | elt_logger | Processing table: sales
+2026-04-20 23:51:49,932 | INFO | elt_logger | sales | row_count | Value=5 | Status=PASS
+2026-04-20 23:51:49,933 | INFO | elt_logger | sales | null_check | Value=2 | Status=FAIL
+2026-04-20 23:51:49,933 | INFO | elt_logger | sales | duplicate_check | Value=1 | Status=FAIL
+2026-04-20 23:51:49,933 | WARNING | elt_logger | sales → VALIDATIONS FAILED ❌
+2026-04-20 23:51:49,933 | INFO | elt_logger | Processing table: sales_compare
+2026-04-20 23:51:49,935 | ERROR | elt_logger | sales_compare → ERROR: [Errno 2] No such file or directory: 'data/source_sales.xlsx'
+2026-04-20 23:51:49,935 | INFO | elt_logger | Execution Completed
+2026-04-20 23:54:23,772 | INFO | elt_logger | Starting ELT Validation Framework
+2026-04-20 23:54:23,773 | INFO | elt_logger | Processing table: sales
+2026-04-20 23:54:23,923 | INFO | elt_logger | sales | row_count | Value=5 | Status=PASS
+2026-04-20 23:54:23,924 | INFO | elt_logger | sales | null_check | Value=2 | Status=FAIL
+2026-04-20 23:54:23,924 | INFO | elt_logger | sales | duplicate_check | Value=1 | Status=FAIL
+2026-04-20 23:54:23,924 | WARNING | elt_logger | sales → VALIDATIONS FAILED ❌
+2026-04-20 23:54:23,924 | INFO | elt_logger | Processing table: sales_compare
+2026-04-20 23:54:23,946 | INFO | elt_logger | sales_compare | row_count | PASS | 5
+2026-04-20 23:54:23,946 | INFO | elt_logger | sales_compare | missing_in_target | FAIL | 1
+2026-04-20 23:54:23,947 | INFO | elt_logger | sales_compare | missing_in_source | FAIL | 1
+2026-04-20 23:54:23,947 | WARNING | elt_logger | sales_compare → COMPARISON FAILED ❌
+2026-04-20 23:54:23,947 | INFO | elt_logger | Execution Completed
+2026-04-20 23:57:55,258 | INFO | elt_logger | Starting ELT Validation Framework
+2026-04-20 23:57:55,259 | INFO | elt_logger | Processing table: sales
+2026-04-20 23:57:55,417 | INFO | elt_logger | sales | row_count | Value=5 | Status=PASS
+2026-04-20 23:57:55,418 | INFO | elt_logger | sales | null_check | Value=2 | Status=FAIL
+2026-04-20 23:57:55,418 | INFO | elt_logger | sales | duplicate_check | Value=1 | Status=FAIL
+2026-04-20 23:57:55,418 | WARNING | elt_logger | sales → VALIDATIONS FAILED ❌
+2026-04-20 23:57:55,418 | INFO | elt_logger | Processing table: sales_compare
+2026-04-20 23:57:55,438 | INFO | elt_logger | sales_compare | row_count | PASS | 5
+2026-04-20 23:57:55,438 | INFO | elt_logger | sales_compare | missing_in_target | FAIL | 1
+2026-04-20 23:57:55,439 | INFO | elt_logger | sales_compare | missing_in_source | FAIL | 1
+2026-04-20 23:57:55,439 | INFO | elt_logger | sales_compare | column_mismatch | FAIL | 1
+2026-04-20 23:57:55,467 | WARNING | elt_logger | sales_compare → Mismatch file generated: reports/sales_compare_mismatch.xlsx
+2026-04-20 23:57:55,469 | WARNING | elt_logger | sales_compare → COMPARISON FAILED ❌
+2026-04-20 23:57:55,470 | INFO | elt_logger | Execution Completed
+2026-04-21 00:02:13,160 | INFO | elt_logger | Starting ELT Validation Framework
+2026-04-21 00:02:13,161 | INFO | elt_logger | Processing table: sales
+2026-04-21 00:02:13,318 | INFO | elt_logger | sales | row_count | PASS | 5
+2026-04-21 00:02:13,318 | INFO | elt_logger | sales | null_check | FAIL | 2
+2026-04-21 00:02:13,319 | INFO | elt_logger | sales | duplicate_check | FAIL | 1
+2026-04-21 00:02:13,319 | INFO | elt_logger | Processing table: sales_compare
+2026-04-21 00:02:13,338 | INFO | elt_logger | sales_compare | row_count | PASS | 5
+2026-04-21 00:02:13,338 | INFO | elt_logger | sales_compare | missing_in_target | FAIL | 1
+2026-04-21 00:02:13,339 | INFO | elt_logger | sales_compare | missing_in_source | FAIL | 1
+2026-04-21 00:02:13,339 | INFO | elt_logger | sales_compare | column_mismatch | FAIL | 1
+2026-04-21 00:02:13,378 | INFO | elt_logger | Execution Completed
+2026-04-21 00:06:16,854 | INFO | elt_logger | Starting ELT Validation Framework
+2026-04-21 00:06:16,855 | INFO | elt_logger | Processing table: sales
+2026-04-21 00:06:17,027 | INFO | elt_logger | sales | row_count | PASS | 5
+2026-04-21 00:06:17,028 | INFO | elt_logger | sales | null_check | FAIL | 2
+2026-04-21 00:06:17,028 | INFO | elt_logger | sales | duplicate_check | FAIL | 1
+2026-04-21 00:06:17,028 | INFO | elt_logger | Processing table: sales_compare
+2026-04-21 00:06:17,056 | INFO | elt_logger | sales_compare | row_count | PASS | 5
+2026-04-21 00:06:17,056 | INFO | elt_logger | sales_compare | missing_in_target | FAIL | 1
+2026-04-21 00:06:17,056 | INFO | elt_logger | sales_compare | missing_in_source | FAIL | 1
+2026-04-21 00:06:17,057 | INFO | elt_logger | sales_compare | column_mismatch | FAIL | 1
+2026-04-21 00:06:18,889 | INFO | elt_logger | Execution Completed
+2026-04-21 00:09:30,561 | INFO | elt_logger | Processing table: sales
+2026-04-21 00:09:30,568 | INFO | elt_logger | sales | Row Count: 5
+2026-04-21 00:09:30,568 | INFO | elt_logger | sales | Null Count: 2
+2026-04-21 00:09:30,569 | INFO | elt_logger | sales | Duplicate Count: 1
+2026-04-21 00:09:30,574 | INFO | elt_logger | Processing table: sales_compare
+2026-04-21 00:09:30,583 | INFO | elt_logger | sales_compare | Row Count: 5
+2026-04-21 00:09:30,583 | INFO | elt_logger | sales_compare | Null Count: 0
+2026-04-21 00:09:30,583 | INFO | elt_logger | sales_compare | Duplicate Count: 0
+2026-04-21 00:09:30,590 | INFO | elt_logger | Starting ELT Validation Framework
+2026-04-21 00:09:30,591 | INFO | elt_logger | Processing table: sales
+2026-04-21 00:09:30,600 | INFO | elt_logger | sales | row_count | PASS | 5
+2026-04-21 00:09:30,600 | INFO | elt_logger | sales | null_check | FAIL | 2
+2026-04-21 00:09:30,600 | INFO | elt_logger | sales | duplicate_check | FAIL | 1
+2026-04-21 00:09:30,600 | INFO | elt_logger | Processing table: sales_compare
+2026-04-21 00:09:30,620 | INFO | elt_logger | sales_compare | row_count | PASS | 5
+2026-04-21 00:09:30,620 | INFO | elt_logger | sales_compare | missing_in_target | FAIL | 1
+2026-04-21 00:09:30,620 | INFO | elt_logger | sales_compare | missing_in_source | FAIL | 1
+2026-04-21 00:09:30,620 | INFO | elt_logger | sales_compare | column_mismatch | FAIL | 1
+2026-04-21 00:09:30,911 | INFO | elt_logger | Execution Completed
+2026-04-21 00:09:30,926 | INFO | elt_logger | Null count: 2
+2026-04-21 00:09:30,940 | INFO | elt_logger | Duplicate count: 1
+2026-04-21 00:21:08,482 | INFO | elt_logger | Starting ELT Validation Framework
+2026-04-21 00:21:08,484 | INFO | elt_logger | Processing table: sales
+2026-04-21 00:21:08,691 | INFO | elt_logger | sales | row_count | PASS | 5
+2026-04-21 00:21:08,691 | INFO | elt_logger | sales | null_check | FAIL | 2
+2026-04-21 00:21:08,691 | INFO | elt_logger | sales | duplicate_check | FAIL | 1
+2026-04-21 00:21:08,692 | INFO | elt_logger | Processing table: sales_compare
+2026-04-21 00:21:08,706 | INFO | elt_logger | sales_compare | row_count | PASS | 5
+2026-04-21 00:21:08,706 | INFO | elt_logger | sales_compare | missing_in_target | FAIL | 1
+2026-04-21 00:21:08,706 | INFO | elt_logger | sales_compare | missing_in_source | FAIL | 1
+2026-04-21 00:21:08,707 | INFO | elt_logger | sales_compare | column_mismatch | FAIL | 1
+2026-04-21 00:21:12,241 | INFO | elt_logger | Execution Completed

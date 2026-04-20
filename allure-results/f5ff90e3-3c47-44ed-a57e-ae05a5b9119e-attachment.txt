@@ -1,0 +1,17 @@
+sales | row_count | PASS | 5
+sales | null_check | FAIL | 2
+sales | duplicate_check | FAIL | 1
+sales_compare | row_count | PASS | 5
+sales_compare | missing_in_target | FAIL | 1
+sales_compare | missing_in_source | FAIL | 1
+sales_compare | column_mismatch | FAIL | 1
+Mismatch file: reports/sales_compare_mismatch.xlsx
+
+========== SUMMARY ==========
+sales → FAIL (Pass=1, Fail=2)
+sales_compare → FAIL (Pass=1, Fail=3)
+
+Total Passed: 2
+Total Failed: 5
+
+Dashboard generated: reports/dashboard.html

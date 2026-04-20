@@ -1,0 +1,17 @@
+[
+  {
+    "table_name": "sales",
+    "type": "excel",
+    "source": "data/sample_sales.xlsx"
+  },
+  {
+    "table_name": "sales_compare",
+    "type": "excel_compare",
+    "source": "data/source_sales.xlsx",
+    "target": "data/target_sales.xlsx",
+    "primary_key": ["order_id"],
+    "tolerance": {
+      "amount": 0.05
+    }
+  }
+]

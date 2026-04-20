@@ -1,0 +1,12 @@
+{
+  "oracle": {
+    "user": "your_user",
+    "password": "your_password",
+    "dsn": "hostname:port/servicename"
+  },
+  "databricks": {
+    "server_hostname": "xxx.cloud.databricks.com",
+    "http_path": "/sql/1.0/endpoints/xxx",
+    "access_token": "your_token"
+  }
+}

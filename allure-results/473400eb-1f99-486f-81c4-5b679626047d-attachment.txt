@@ -1,0 +1,4 @@
+INFO | Processing table: sales
+INFO | sales | Row Count: 5
+INFO | sales | Null Count: 2
+INFO | sales | Duplicate Count: 1

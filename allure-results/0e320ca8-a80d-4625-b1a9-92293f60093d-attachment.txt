@@ -1,0 +1,4 @@
+INFO | Processing table: sales_compare
+INFO | sales_compare | Row Count: 5
+INFO | sales_compare | Null Count: 0
+INFO | sales_compare | Duplicate Count: 0
