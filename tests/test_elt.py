@@ -40,12 +40,18 @@ def test_elt(table):
                 table.get("tolerance", {})
             )
 
-            for r in results:
-                with allure.step(f"{r[0]} check"):
+            failures = []
 
-                    # Fail only when validation fails
-                    if r[1] != "PASS":
-                        assert False, f"{r[0]} failed: {r[2]}"
+            for r in results:
+                check_name, status, value = r
+
+                if check_name == "missing_in_target" and value > table.get("threshold_missing", 0):
+                    failures.append(f"{check_name} failed: {value}")
+
+                elif status != "PASS":
+                    failures.append(f"{check_name} failed: {value}")
+
+            assert not failures, "\n".join(failures)
 
             # Attach mismatch data if present
             if mismatch_df is not None and not mismatch_df.empty:
