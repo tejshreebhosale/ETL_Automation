@@ -45,12 +45,26 @@ def test_elt(table):
             for r in results:
                 check_name, status, value = r
 
-                if check_name == "missing_in_target" and value > table.get("threshold_missing", 0):
-                    failures.append(f"{check_name} failed: {value}")
+                # ✅ Missing in target
+                if check_name == "missing_in_target":
+                    if value > table.get("threshold_missing_target", 0):
+                        failures.append(f"{check_name} failed: {value}")
 
+                # ✅ Missing in source (extra in target)
+                elif check_name == "missing_in_source":
+                    if value > table.get("threshold_missing_source", 0):
+                        failures.append(f"{check_name} failed: {value}")
+
+                # ✅ Column mismatch
+                elif check_name == "column_mismatch":
+                    if not table.get("allow_column_mismatch", False):
+                        failures.append(f"{check_name} failed")
+
+                # ✅ Other validations (value mismatch etc.)
                 elif status != "PASS":
                     failures.append(f"{check_name} failed: {value}")
 
+            # Final assertion
             assert not failures, "\n".join(failures)
 
             # Attach mismatch data if present
@@ -76,11 +90,11 @@ def test_elt(table):
                     status = r["status"]
                     value = r["value"]
 
-                    # STRICT MODE (production-grade validation)
+                    # ✅ STRICT MODE
                     if strict:
                         assert status == "PASS", f"{validation_name} failed: {value}"
 
-                    # THRESHOLD MODE (flexible validation)
+                    # ✅ THRESHOLD MODE
                     else:
 
                         if validation_name == "null_check":
@@ -94,6 +108,5 @@ def test_elt(table):
                             )
 
                         else:
-                            # fallback for other validations
                             if status != "PASS":
                                 assert False, f"{validation_name} failed: {value}"
