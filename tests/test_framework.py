@@ -28,12 +28,13 @@ def test_table_validations(table):
     logger.info(f"{table_name} | Duplicate Count: {results['duplicate_count']}")
 
     # Assertions
-
     if not table.get("allow_empty", False):
-    assert results["row_count"] > 0, f"{table_name}: No data found"
+        assert results["row_count"] > 0, f"{table_name}: No data found"
 
-    assert results["null_count"] <= table["null_threshold"], \
-    f"{table_name}: Nulls exceed threshold ({results['null_count']})"
+    assert results["null_count"] <= table.get("null_threshold", 0), (
+        f"{table_name}: Nulls exceed threshold ({results['null_count']})"
+    )
 
-    assert results["duplicate_count"] <= table["duplicate_threshold"], \
-    f"{table_name}: Duplicates exceed threshold ({results['duplicate_count']})"
+    assert results["duplicate_count"] <= table.get("duplicate_threshold", 0), (
+        f"{table_name}: Duplicates exceed threshold ({results['duplicate_count']})"
+    )
