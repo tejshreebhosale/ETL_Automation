@@ -6,6 +6,8 @@ def compare_data(source_df, target_df, keys, tolerance_config=None):
 
     results = []
 
+    source_df.columns = source_df.columns.str.strip().str.lower()
+    target_df.columns = target_df.columns.str.strip().str.lower()
     # 🔹 Row count
     if len(source_df) == len(target_df):
         results.append(("row_count", "PASS", len(source_df)))

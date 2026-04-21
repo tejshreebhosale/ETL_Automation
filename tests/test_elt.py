@@ -32,7 +32,8 @@ def test_elt(table):
         if table_type == "excel_compare":
 
             source_df, target_df = data
-
+            print("SOURCE:", list(source_df.columns))
+            print("TARGET:", list(target_df.columns))
             results, mismatch_df = compare_data(
                 source_df,
                 target_df,
@@ -66,10 +67,27 @@ def test_elt(table):
 
                 # ✅ Column mismatch
                 elif check_name == "column_mismatch":
-                    if not table.get("allow_column_mismatch", False):
-                        failures.append(f"{check_name}")
-                    else:
-                        warnings.append(f"{check_name}")
+
+                    schema_config = table.get("schema_validation", {})
+                    mode = schema_config.get("mode", "strict")
+
+                    source_cols = set(source_df.columns)
+                    target_cols = set(target_df.columns)
+
+                    missing_cols = source_cols - target_cols
+                    extra_cols = target_cols - source_cols
+
+                    # Remove allowed columns
+                    missing_cols = missing_cols - set(schema_config.get("allowed_missing_columns", []))
+                    extra_cols = extra_cols - set(schema_config.get("allowed_extra_columns", []))
+
+                    message = f"Missing: {missing_cols}, Extra: {extra_cols}"
+
+                    if mode == "strict" and (missing_cols or extra_cols):
+                        failures.append(f"column_mismatch: {message}")
+
+                    elif mode == "warn" and (missing_cols or extra_cols):
+                        warnings.append(f"column_mismatch: {message}")
 
                 # ✅ Other validations
                 elif status != "PASS":

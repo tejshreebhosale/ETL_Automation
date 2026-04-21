@@ -17,15 +17,20 @@
     "source": "data/source_sales.xlsx",
     "target": "data/target_sales.xlsx",
     "primary_key": ["order_id"],
-    "tolerance": {
-      "amount": 5
-    },
     "null_threshold": 5,
     "duplicate_threshold": 5,
     "allow_empty": true,
     "validation_mode": "threshold",
     "threshold_missing_target": 1,
     "threshold_missing_source": 1,
-    "allow_column_mismatch": true
+    "allow_column_mismatch": false,
+    "tolerance": {
+      "amount": 5
+    },
+    "schema_validation": {
+      "mode": "warn",  
+      "allowed_missing_columns": [],
+      "allowed_extra_columns": []
+    }
   }
 ]
