@@ -41,39 +41,59 @@ def test_elt(table):
             )
 
             failures = []
+            warnings = []
 
             for r in results:
                 check_name, status, value = r
 
                 # ✅ Missing in target
                 if check_name == "missing_in_target":
-                    if value > table.get("threshold_missing_target", 0):
-                        failures.append(f"{check_name} failed: {value}")
+                    threshold = table.get("threshold_missing_target", 0)
 
-                # ✅ Missing in source (extra in target)
+                    if value > threshold:
+                        failures.append(f"{check_name}: {value}")
+                    elif value > 0:
+                        warnings.append(f"{check_name}: {value}")
+
+                # ✅ Missing in source
                 elif check_name == "missing_in_source":
-                    if value > table.get("threshold_missing_source", 0):
-                        failures.append(f"{check_name} failed: {value}")
+                    threshold = table.get("threshold_missing_source", 0)
+
+                    if value > threshold:
+                        failures.append(f"{check_name}: {value}")
+                    elif value > 0:
+                        warnings.append(f"{check_name}: {value}")
 
                 # ✅ Column mismatch
                 elif check_name == "column_mismatch":
                     if not table.get("allow_column_mismatch", False):
-                        failures.append(f"{check_name} failed")
+                        failures.append(f"{check_name}")
+                    else:
+                        warnings.append(f"{check_name}")
 
-                # ✅ Other validations (value mismatch etc.)
+                # ✅ Other validations
                 elif status != "PASS":
-                    failures.append(f"{check_name} failed: {value}")
+                    failures.append(f"{check_name}: {value}")
 
-            # Final assertion
-            assert not failures, "\n".join(failures)
-
-            # Attach mismatch data if present
+            # ✅ Attach mismatch data
             if mismatch_df is not None and not mismatch_df.empty:
                 allure.attach(
                     mismatch_df.to_csv(index=False),
                     name="Mismatch Data",
                     attachment_type=allure.attachment_type.CSV
                 )
+
+            # ✅ Attach warnings
+            if warnings:
+                allure.attach(
+                    "\n".join(warnings),
+                    name="Warnings",
+                    attachment_type=allure.attachment_type.TEXT
+                )
+
+            # ✅ Final decision (fail only on critical issues)
+            if failures:
+                assert False, "Failures:\n" + "\n".join(failures)
 
         # =========================
         # STANDARD EXCEL VALIDATION
@@ -90,11 +110,11 @@ def test_elt(table):
                     status = r["status"]
                     value = r["value"]
 
-                    # ✅ STRICT MODE
+                    # STRICT MODE
                     if strict:
                         assert status == "PASS", f"{validation_name} failed: {value}"
 
-                    # ✅ THRESHOLD MODE
+                    # THRESHOLD MODE
                     else:
 
                         if validation_name == "null_check":
