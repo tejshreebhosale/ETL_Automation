@@ -26,6 +26,6 @@
     "validation_mode": "threshold",
     "threshold_missing_target": 1,
     "threshold_missing_source": 1,
-    "allow_column_mismatch": false
+    "allow_column_mismatch": true
   }
 ]
